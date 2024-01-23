@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Form</title></head>
+
+
+    <body>
+        <h1>Form</h1>
+        <form action = "http://www.nextpoint.co.uk/test.php" method = "post"><!--Action can be used to link an address to send data to. Method is used to describe how information is sent eithr Get or Post-->
+            <fieldset> <!--Fieldset outlines inputs within the forms to seperate sections-->
+                <legend>Job Details</legend> <!--Legend allows details to be shown on the fieldset box-->
+                <label for = "JobInput">Job</label>
+            <input id = "JobInput" name = "job" type="text" required/>
+            <br/>
+            <label>
+                <span>Email:</span> <!--Allows us to change it with CSS-->
+                <input type="email" name = "email" placeholder ="abc@whomail.com" readonly/>
+            </label>
+            </fieldset>
+            
+            <fieldset>
+            <label>
+                Range Bar:
+                <input type="range" name = "number" max="5" min = "2" step = "0.1" value="2" /><!--Value is used to set the default value of the range when the form loads-->
+            </label>
+            
+            <br/>
+            <label>
+                Checkbox:
+                <input type="checkbox" name = "bool"value="Yes"/>
+            </label>
+           </fieldset>
+            
+            <label>
+                Radio:
+            </label> 
+                <label>
+                    <input type="radio" name = "something2" value="One"/><!--Only one radio button can be selected at the same time-->
+                    <span>Option 1</span> <!--Span can be used to stylize using CSS-->
+                </label>
+                <label>
+                    <input type="radio" name = "something2" value="One"/><!--Only one radio button can be selected at the same time-->
+                    <span>Option 2</span>
+                </label>
+                <label>
+                    <input type="radio" name = "something2" value="One"/><!--Only one radio button can be selected at the same time-->
+                    <span>Option 3</span>
+                </label>
+            
+            
+            <br/>
+            <label>
+                Colour Picker:
+                <input type="color" name = "colour" value="#ff0000"/> <!--Sets the default value to red, you need to use the hexidecimal value-->
+            </label> 
+            
+            <br/>
+            <label>
+                Date:
+                <input type="date" value="2012-08-09"/>
+            </label>
+            
+            <br/>
+            <label>
+                Email:
+                <input type="email" name = "email" value ="abc"/><!--Used to cHange the keyboard on a phone to show the @ symbol when entering email-->
+            </label> 
+            
+            <br/>
+            <label>
+                Password:
+                <input type="password" name = "password"/>
+            </label>
+            
+            
+            <br/>
+            Text box allows you to enter multiple lines and resize the text box <!--Resets the entire form-->
+            <br/>
+            <textarea autofocus name = "bio"></textarea> <!--Autofocus highlights the text area when the page first loads-->
+            <br/>
+            <label>Select Box</label>
+            <select name = "colourChoice">
+                <option>---</option>
+                <option>red</option>
+                <option>yellow</option>
+                <option>blue</option>
+            </select>
+            <br/>
+            
+            
+            <br/>
+            <label>
+                Button that can submit the form:
+                <button></button>
+            </label>
+            
+            <br/>
+
+            <br/>
+            Reset <!--Resets the entire form-->
+            <input  type="reset">
+            <br/>
+            <label>
+                Button:</label>
+                <input type="button" value = "abc">
+                <button name = "AAA" value = "xyz">123</button> <!--xyz is the value that is submitted-->
+            <input type = "submit" value="Go!">
+        </form>
+
+    </body>
+</html>
