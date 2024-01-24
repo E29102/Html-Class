@@ -1,0 +1,85 @@
+body{
+    height: 100%;
+    margin: 0;
+}
+header{
+    background: #005BAB;
+}
+
+header > img{
+    display: block;
+    float: left;
+    height: 3em;
+}
+nav{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav > ul{
+    list-style: none;
+    
+    padding: 1em 0;
+    margin: 0;
+    text-align: center;
+    
+    
+}
+nav > ul> li {
+    display: inline;
+    margin: 2%;
+
+    
+}
+a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+form> ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+form li {
+    margin: 5px 0;
+}
+
+form  label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+}
+
+html{
+    font-family: Verdana, sans-serif;
+}
+header h1{
+    padding: 4em 1em;
+    color: white;
+    background-size: cover;
+    margin-top: 0;
+}
+
+.keyboard{
+   
+    background-image:url("images/keyboard.jpg"); 
+}
+.team{
+    background-image:url("images/theTeam.jpg");
+}
+.trainer{
+    background-image:url("images/trainer.jpg");
+}
+.course{
+    background-image:url( "images/trainingCourses.jpg");
+}
+
+nav > h6{
+    display: none;
+}
