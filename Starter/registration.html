@@ -1,0 +1,94 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <title>Book a Course</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo-white.svg" alt="QA Corporate Logo">
+        <nav>
+            <h6>Site navigation</h6>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="registration.html">Course Registration</a></li>
+                <li><a href="team.html">The Team</a></li>
+            </ul>
+        </nav>
+        <h1 class="trainer">Book a Course</h1>
+    </header>
+
+    <main>
+
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Your Details</legend>
+                <ul>
+                    <li>
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" autofocus>
+                    </li>
+
+                    <li>
+                        <label for="surname">Surname</label>
+                        <input type="text" id="surname" name="surname">
+                    </li>
+
+
+                    <li>
+                        <label for="position">Position</label>
+                        <input type="text" id="position" name="position">
+                    </li>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@domain.com" required>
+                    </li>
+                    <li>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Eg. +447500000000" required>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Course Details</legend>
+                <ul>
+                    <li>
+                        <label for="course">Course</label>
+                        <select name="course" id="course">
+                            <option value="QAJAVSC">Programming with Javascript</option>
+                            <option value="QAWEBUI">Developing Web Applications using HTML5</option>
+                            <option value="QAWEBCSS">Developing Responsive Websites</option>
+                            <option value="QAJQUERY">Leveraging the Power of jQuery</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="delegates">Number of delegates:</label>
+                        <input type="number" name="delegates" id="delegates">
+                    </li>
+                    <li>
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Submit Form</legend>
+                <button type="submit">Book</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <img class = "socialicons"src="images\social\social.svg">
+        <img class = "socialicons"src="images\social\social-1.svg">
+        
+        <img class = "socialicons"src="images\social\social-2.svg">
+        <img class = "socialicons"src="images\social\social-3.svg">
+        <img class = "socialicons"src="images\social\social-4.svg">
+    </footer>
+
+</body>
+
+</html>
