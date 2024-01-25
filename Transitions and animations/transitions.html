@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transitions</title>
+
+
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                height: 100%;
+                margin: 0;
+            }
+            h1{
+                
+                transition: background-color 1s;
+            }
+
+            .hover{
+                            
+                 transition: background 1s linear 0s, color 1s linear 0s, padding 1s linear 0s;
+                        }
+                        
+            .hover:hover{
+                background: yellow;
+                color: blue;
+                
+                
+                
+                padding-left: 3em;
+            }
+            .slow{
+                transition-duration: 5s;
+            }
+            
+            header{
+                background-color: lightblue;
+            }
+            li{
+                list-style: none;
+            }
+            nav{
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            }
+            nav > ul{
+                list-style: none;
+                
+                padding: 1em 0;
+                margin: 0;
+                text-align: center;
+                
+            
+            }
+            nav > ul> li {
+                display: inline;
+                margin: 2%;
+                font-size:2em;}
+
+            li:hover {
+                color: rgb(211, 42, 70);
+                transition: all 0.5s;
+                }
+
+            .animated{
+                animation: barrel-roll 1s infinite;
+            }
+
+            @keyframes barrel-roll{
+                
+                    
+                
+                
+                    
+                100%{
+                    transform: rotate(360deg);
+                }
+                    
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header style="margin: 0;">
+        <nav >
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Profile</li>
+                <li>Contact</li>
+                
+            </ul>
+        </nav>
+    </header>
+        <h1 class="hover">Hello</h1>
+
+        <h1 class ="animated"><img style = "display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;"src="https://img.pixers.pics/pho_wat(s3:700/FO/82/05/86/85/700_FO82058685_f460cd17b40fc4ed869331ac754baf2d.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/wall-murals-black-and-white-hypnosis-spiral.jpg.jpg"></h1>
+    </body>
+</html>
