@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS</title>
+
+
+        <style>
+            body{
+                font-size: 30px;
+                background-color: aqua;
+                background-size: cover;
+            }
+            h1{
+                background: lightblue;
+                
+            }
+            main{
+                background: orange;
+            }
+
+            p{
+                color: red;
+            }
+
+            strong{
+                background: yellow;
+                
+            }
+
+            
+            #notice{ 
+                display: block;
+                background: purple;
+                color: greenyellow;
+                font-size: 2em;
+                padding: 1em;
+                border-radius: 30px;
+                width: calc(50vw + 200px);
+                height: 25vh;
+                overflow: auto;
+            }
+
+            
+
+            #notice > a{
+                font-weight: bold;
+                text-decoration: underline;
+                font-family: Arial;
+            }
+                
+            
+
+            .highlight{
+                background: lightgreen;
+            }
+
+            .big{
+                font-size: 4em;
+            }
+            [autofocus]{
+                            background: blue;
+            }
+
+            [href *= "google" i]{
+                background: red;
+                color: white;
+            }
+
+            [href *= "X" i]{
+                background: lightblue;
+                color: black;
+            }
+
+            [type = "number"]{
+                background: orange;
+            }
+              
+            [max="3"]{
+                display: inline-block;
+                width: 3em;
+            }
+            [readonly]{
+                color: red;
+                opacity: .5;
+                border: 2px dotted red;
+            }
+
+            main> div{
+                display: flex;
+                flex-direction: column;
+                column-gap: 10px;
+                flex-wrap: wrap;
+                height: 400px;
+                
+                order: 8;
+               
+ 
+            }
+            p{
+                background-color: lightblue;
+            }
+
+            @media screen and (min-width: 700px)and (max-width:1700px){
+                body{
+                    background: green;
+                }
+                
+            }
+
+            @media screen and (max-width: 700px){
+                body{
+                    background: plum;
+                }
+                
+            }
+            
+            
+            
+
+
+            
+
+
+            
+            
+            
+            
+        </style>
+        <!--# is used when creating style for an ID-->
+        <!--. is used when creating style for a class-->
+        <!--You can have multiple classes on the same element-->
+        <!--[] can be used to create stylings for attributes-->
+        <!--i makes href styles not case sensitive-->
+         <!--: means the status of an element e.g. when hovering do something-->
+         <!-- > means a direct descendant -->
+         <!--vw means view width which means that the box would be showing a certain % of the screen rather that just doing width 50% which would be 50% of the box its in-->
+         <!--#notice:hover{
+                background: blue;
+                border: 3px solid greenyellow;
+                box-sizing: border-box;
+                
+                
+            }
+        
+        media screen is used to chnage details about the page dependant on the screen used
+    max width can be used to display a background colour depending on the size of the screen, above 700 doesnt display other colour to save data
+can be used to configure to different device types-->
+    </head>
+
+    <body>
+
+            <button onclick="document.body.style.fontSize='10px'">10px</button>
+            <main>
+                
+                <!--ID is unique and class can be used for multiple items-->
+                <!--Padding is on the inside and goes clockwise-->
+                <!--Margin is on the outside-->
+                <h1 style="padding:.5em 2em .5em 2em; margin: 0;">Hello</h1>
+                <div>
+                <p>This is <strong>content.</strong></p>
+                <p class = "highlight">This is content.</p>
+                <p >This is content.</p>
+                <p >This is content.</p>
+               
+                <p style="order: 1;"><a href= "https://google.com">Google</a></p>
+                <p style="order: 2;"><a href= "https://facebook.com">Facebook</a></p>
+                <p style="order: 4;"><a href= "https://x.com">X</a></p>
+                <p style="order: 3;"><a href= "https://instagram.com">Instagram</a></p></div>
+            </main>
+
+            <p>CONTENT</p>
+
+            <section id = "notice">
+                <input readonly>
+                <input autofocus>
+                <input type = "number">
+                <input max = "3">
+                <a href = "https://youtube.com" >This is content.</a>
+            <div class = "highlight big">
+                
+                <p >This is content.</p>
+            </div>
+            </section>
+    </body>
+</html>
