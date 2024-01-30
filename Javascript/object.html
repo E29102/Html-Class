@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!---->
+<script>
+let something = {};
+
+let person = {
+  "name":"Dave",
+  "age": 20,
+  "height":5.8,
+  "job": "Bus Driver",
+  "gender": "Male",
+  "ethnicity":"White",
+  "register":["A", "B", "C"],
+  "address":{"street": "ABC", "city": "London", "postcode": "XYZ"},
+  "run": function (from, to){
+    console.log(`I will run ${from} to ${to}`)},
+
+    "telephone number": "0141567567"
+
+}
+
+
+console.log(person.name);
+console.log(person.age);
+console.log(person.job);
+console.log(person.register[0]);
+console.log(person.register[1]);
+console.log(person.register[2]);
+document.write(person.address);
+console.log(person.address.street);
+console.log(person.address.city);
+console.log(person.address.postcode);
+//console.log(person.register.length);
+
+person.run("Manchester", "London")
+
+console.log(person[`telephone number`]);
+
+let key = prompt("Enter a field");
+
+console.log(person[key])
+
+//DOM - Document Object Model
+
+
+data = ["A", "B", "C"];
+for( let item in data){
+  console.log(item)
+}
+
+for(let index of data){
+  console.log(index)
+}
+
+
+
+
+
+
+</script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

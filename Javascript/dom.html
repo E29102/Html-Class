@@ -1,0 +1,38 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+      <!---->
+
+    </head>
+
+    <body>
+        <h1 id = "title">Hello</h1>
+
+        <p class = "hightlight">
+            Content
+        </p>
+
+        <input value = "a">
+        <input value = "b">
+        <input value = "c">
+        <script>
+            let node = document.getElementById(`title`) //searches for the first element it finds, for all its querySelectorAll
+            console.log(node)
+
+            console.log(node.innerHTML);
+            node.innerHTML = node.innerHTML + "*******";
+
+            function test(){
+                let nodeList = document.querySelectorAll(`[value]`);
+
+                for(let node of nodeList){
+                    console.log(node.value);
+                }
+            }
+
+
+            
+
+        </script>
+    </body>
+</html>

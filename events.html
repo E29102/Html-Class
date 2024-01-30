@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script>
+        /*onchange	    An HTML element has been changed
+          onclick	    The user clicks an HTML element
+          onmouseover	The user moves the mouse over an HTML element
+          onmouseout	The user moves the mouse away from an HTML element
+          onkeydown	    The user pushes a keyboard key
+          onload	    The browser has finished loading the page
+          e             Within a function means the event details
+          
+          Using defer (only works if your script is in a different file) and onload prevent the page shooting out an error saying "there is no button" before the page has loaded*/
+        let action = function(){
+            alert(789)
+        }
+
+
+        var data ={
+            "count":1,
+            "name":123
+        };
+
+        let dataBind = function(){
+
+        }
+
+        dataBind.set = function(key,value){
+            data[key] = value;
+        }
+
+        dataBind.get = function(key){
+            return data[key];
+        }
+
+        dataBind.display = function(){
+            // ()=>{} otherway for function
+            document.querySelectorAll(`[name],[data]`).forEach(function(item){
+                //console.log(item.value, item.innerText)
+                //console.log(item.name)
+               /* let key =  item.name
+               // console.log(key)
+                //console.log(data[key])
+                if(key ===undefined){
+                    key = item.getAttribute("data");
+                }
+                // can do this instead let key = item.name ||item.getAttribute("data")
+                if(item.innerText){
+                    item.innerText = data[key];
+                }
+                if(item.value){
+                    item.value = data[key];
+                }*/
+                //if item is not an input element
+                if(item.name == undefined){
+                    //get key from data
+
+                    //Input box doesnt have a name but has data hence why it would enter the if statement
+                    let key = item.getAttribute("data")
+                    console.log(key)
+                    if (data[key]){
+                        item.innerText = data[key];
+                    }
+
+                    
+                }
+                // if item is an input element
+                else{
+                    if (data[item.name] !== undefined){
+                    item.value = data[item.name];}
+                    
+                }
+
+            }
+            
+            ) 
+            
+        }
+
+
+        window.addEventListener(`load`, function(){
+            dataBind.display()
+            document.querySelector(`button`).addEventListener ( `click` , function(){
+                    var x = document.createElement("INPUT")
+                    x.setAttribute("type", "text")
+                    document.getElementById("myForm").appendChild(x)
+
+            })
+            //document.querySelector(`button:nth-child(2)`).addEventListener (`click` ,action)
+            document.querySelector(`form`).addEventListener(`input`, function(e){
+                console.log(e.target.name)
+                dataBind.set(e.target.name, e.target.value);
+                dataBind.display()
+                
+            })
+
+            
+        
+        })
+        let addItem = function(templateName){
+
+            let parentNode = document.getElementById(`itemList`);
+            let template = document.querySelector(`[data-template ="${templateName}"`).innerHTML;
+
+            template = template.replaceAll("{count}", parentNode.children.length);
+            let node = document.createElement("div");
+            node.innerHTML =template;
+            
+            document.getElementById("itemList").appendChild(node);
+            //console.log(document.querySelector("template") .textContent)
+
+
+           // document.getElementById("itemList").innerHTML += `<div>
+               // <span>item</span>
+              //  </div>`;
+        }
+
+
+            
+        
+
+    </script>
+    </head>
+
+    <body >
+        <!--
+        <button onclick="alert(123)">Click me</button>
+        
+        <p onclick="alert(123)">Click me</p>
+        <p onmouseover="alert(123)">On mouse over</p>
+        <input onfocus="console.log(123)">focus</p>
+        <input onchange="console.log(this.value)">onChange</p>
+        <input oninput="console.log(this.value)">onInput</p>
+        <img src = "fakeImage.jpg" onerror="alert(`Image not loaded`)"
+        
+        event represents the vent details>-->
+        <button>Add new input box</button>
+        <form id = "myForm">
+           <!-- <button>Click me</button>
+            <button>Click me</button>-->
+            <input name = "name">
+
+            <input name = "password" type = "password">
+            <input name = "other-box">
+            <br/>
+            <div id = "itemList">
+
+            </div>
+            <input type = "button" value = "add item" onclick = "addItem(`item`)"></button>
+        </form>
+        <h1 data = "name"></h1>
+        <h1 data = "password"></h1>
+        <h1 data = "other-box"></h1>
+        <template data-template = "item">
+            <span>Item</span>
+            <span><input name = input{count}></span>
+            
+
+
+        </template>
+        
+        
+        
+
+    
+
+
+    </body>
+</html>
