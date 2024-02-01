@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="dataBind.js" defer></script>
+    <script>
+       
+        
+
+
+      //  var data ={
+       //     "telephone": "123456",
+       //     "address": "abc"
+      //  };
+      
+
+
+      let data = JSON.parse(sessionStorage.getItem("data"));
+    
+      fetch(`https://dummyjson.com/user/1`)
+        .then(result => result.json())
+        //Other way would be function(result){return result.json}
+        .then(function(details){
+            console.log(details)
+            data = details;
+            dataBind.display();
+        });
+      
+
+  
+
+    </script>
+    </head>
+
+    <body >
+        <h1>Display Data</h1>
+        <p>Telephone:<span data = "telephone"></span></p>
+        <p>Address:<span data = "address.city"></span></p>
+
+        <p>Age:<span data = "age"></span></p>
+        <p>Birthdate:<span data = "birthDate"></span></p>
+        <p>Eye colour:<span data = "eyeColor"></span></p>
+
+    
+
+
+    </body>
+</html>
